@@ -1,7 +1,11 @@
 import React from "react";
 
 export default function Dictionary() {
+
+
   return (
-    <h3>FROM DICTIONARY</h3>
+    <form>
+      <input type="search" autoFocus={true} />
+    </form>
   );
 }
