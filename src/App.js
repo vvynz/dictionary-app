@@ -4,7 +4,15 @@ import Dictionary from "./Dictionary";
 function App() {
   return (
     <div className="App">
-      <Dictionary />
+      <div className="container">
+        <header className="text-center">Dictionary App</header>
+        <main>
+          <Dictionary />
+        </main>
+        <footer className="text-center">
+          <small>Coded by Vivian Zhang.</small>
+        </footer>
+      </div>
     </div>
   );
 }

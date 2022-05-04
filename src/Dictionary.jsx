@@ -4,7 +4,7 @@ export default function Dictionary() {
 
 
   return (
-    <form>
+    <form className="text-center">
       <input type="search" autoFocus={true} />
     </form>
   );
