@@ -5,7 +5,12 @@ export default function Dictionary() {
 
   const search = (e) => {
     e.preventDefault();
-    alert(`Looking up ${keyword}...`);
+    // alert(`Looking up ${keyword}...`);
+
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    console.log("APIURL", apiUrl);
+
+
   }
 
   const handleKeyword = (e) => {
