@@ -3,6 +3,7 @@ import axios from "axios";
 
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
+  const [searchData, setSearchData] = useState({});
 
   const handleResponse = (res) => {
     console.log("RESPONSE", res.data);
@@ -16,7 +17,10 @@ export default function Dictionary() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     console.log("APIURL", apiUrl);
 
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl)
+      .then(handleResponse)
+      // if word doesn't exist, displays error message
+      .catch((err) => console.log(err.response.data.message));
   }
 
   // updates the setKeyword state with user's input
