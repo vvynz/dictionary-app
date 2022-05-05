@@ -1,4 +1,5 @@
 import React from "react";
+import Definition from "./Definition";
 
 export default function Results(props) {
   console.log("PROPS =", props.results);
@@ -11,6 +12,7 @@ export default function Results(props) {
         <span>
           <small>{data.phonetic}</small>
         </span>
+        <Definition />
       </div>
     );
   } else {
