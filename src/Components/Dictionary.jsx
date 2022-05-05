@@ -7,7 +7,7 @@ export default function Dictionary() {
   const [results, setResults] = useState({});
 
   const handleResponse = (res) => {
-    console.log("RESPONSE", res.data[0]);
+    // console.log("RESPONSE", res.data[0]);
     setResults(res.data[0]);
   }
 
@@ -35,7 +35,7 @@ export default function Dictionary() {
       <form className="text-center" onSubmit={search}>
         <input type="search" autoFocus={true} onChange={handleKeyword} />
       </form>
-      <Results />
+      <Results results={results} />
     </div>
   );
 }
