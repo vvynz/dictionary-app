@@ -5,9 +5,10 @@ export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
 
   const handleResponse = (res) => {
-    console.log("RESPONSE", res);
+    console.log("RESPONSE", res.data);
   }
 
+  // on submit event, will make an axios call to the api
   const search = (e) => {
     e.preventDefault();
     // alert(`Looking up ${keyword}...`);
@@ -18,6 +19,7 @@ export default function Dictionary() {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  // updates the setKeyword state with user's input
   const handleKeyword = (e) => {
     setKeyword(e.target.value);
   }
