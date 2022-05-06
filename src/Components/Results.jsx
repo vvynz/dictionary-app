@@ -12,7 +12,12 @@ export default function Results(props) {
         <span>
           <small>{data.phonetic}</small>
         </span>
-        <Definition />
+        {data.meanings.map(function(definition, index) {
+          return (
+            <div key={index}>
+              <Definition definitions={definition} />
+            </div>);
+        })}
       </div>
     );
   } else {
