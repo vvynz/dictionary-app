@@ -7,14 +7,16 @@ export default function Definition(props) {
     <div>
       <em>{meaning.partOfSpeech}</em>
       {meaning.definitions.map(function(definition, index) {
-        return (<div key={index} className="definition mb-5">
-          <h5>{definition.definition}</h5>
-          {definition.example ?
-            <div>
-              <p>Examples:</p>
-              <em>{definition.example}</em>
-            </div> : null}
-        </div>);
+        return (
+          <div key={index} className="definition mb-5">
+            <h5>{definition.definition}</h5>
+            {definition.example ?
+              <div>
+                <p>Examples:</p>
+                <em>{definition.example}</em>
+              </div> : null}
+          </div>
+        );
       })}
     </div>
   );
