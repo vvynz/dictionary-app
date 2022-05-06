@@ -9,8 +9,11 @@ export default function Definition(props) {
       {meaning.definitions.map(function(definition, index) {
         return (<div key={index} className="definition mb-5">
           <h5>{definition.definition}</h5>
-          <p>Examples:</p>
-          <em>{definition.example}</em>
+          {definition.example ?
+            <div>
+              <p>Examples:</p>
+              <em>{definition.example}</em>
+            </div> : null}
         </div>);
       })}
     </div>
