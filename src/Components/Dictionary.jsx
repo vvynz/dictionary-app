@@ -7,17 +7,14 @@ export default function Dictionary() {
   const [results, setResults] = useState(null);
 
   const handleResponse = (res) => {
-    // console.log("RESPONSE", res.data[0]);
     setResults(res.data[0]);
   }
 
   // on submit event, will make an axios call to the api
   const search = (e) => {
     e.preventDefault();
-    // alert(`Looking up ${keyword}...`);
 
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    console.log("APIURL", apiUrl);
 
     axios.get(apiUrl)
       .then(handleResponse)

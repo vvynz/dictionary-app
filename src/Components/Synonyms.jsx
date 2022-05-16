@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Synonyms(props) {
-  console.log("SYN", props.synonyms);
+  // console.log("SYN", props.synonyms);
   const synonyms = props.synonyms;
 
   if (synonyms) {
