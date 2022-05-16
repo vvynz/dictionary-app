@@ -11,13 +11,17 @@ export default function Results(props) {
       <div>
         <h4>{data.word}</h4>
         <span>
-          {data.phonetics.map((phonetic, key) => {
-            return (
-              <div key={key}>
-                <Phonetic phonetic={phonetic} />
-              </div>
-            )
-          })}
+          {data.phonetics
+            .filter(phonetic => {
+              return phonetic.audio;
+            })
+            .map((phonetic, key) => {
+              return (
+                <div key={key}>
+                  <Phonetic phonetic={phonetic} />
+                </div>
+              )
+            })}
         </span>
         {data.meanings.map(function(definition, index) {
           return (
