@@ -10,6 +10,11 @@ export default function Dictionary() {
     setResults(res.data[0]);
   }
 
+  // 
+  const handlePexelsRes = (res) => {
+    console.log("PEXELS DATA", res);
+  }
+
   // on submit event, will make an axios call to the api
   const search = (e) => {
     e.preventDefault();
@@ -27,7 +32,7 @@ export default function Dictionary() {
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
 
     // make the api call with the authorization headers
-    axios.get(pexelsApiUrl, { headers: headers }).then();
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsRes);
 
   }
 
