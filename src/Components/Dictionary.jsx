@@ -20,6 +20,15 @@ export default function Dictionary() {
       .then(handleResponse)
       // if word doesn't exist, displays error message
       .catch((err) => console.log(err.response.data.message));
+
+    // api call for Pexels
+    let pexelsApiKey = "563492ad6f91700001000001c1aaf75420014625859b93064f2f6531";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+
+    // make the api call with the authorization headers
+    axios.get(pexelsApiUrl, { headers: headers }).then();
+
   }
 
   // updates the setKeyword state with user's input
