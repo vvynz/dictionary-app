@@ -4,7 +4,7 @@ import Results from "./Results";
 
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
-  const [results, setResults] = useState({});
+  const [results, setResults] = useState(null);
 
   const handleResponse = (res) => {
     // console.log("RESPONSE", res.data[0]);
