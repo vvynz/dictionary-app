@@ -5,6 +5,7 @@ import Results from "./Results";
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState(null);
+  const [photos, setPhotos] = useState(null);
 
   const handleResponse = (res) => {
     setResults(res.data[0]);
@@ -12,7 +13,8 @@ export default function Dictionary() {
 
   // 
   const handlePexelsRes = (res) => {
-    console.log("PEXELS DATA", res);
+    console.log("PEXELS DATA", res.data.photos);
+    setPhotos(res.data.photos);
   }
 
   // on submit event, will make an axios call to the api
