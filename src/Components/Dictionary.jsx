@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
@@ -49,6 +50,7 @@ export default function Dictionary() {
         <input type="search" autoFocus={true} onChange={handleKeyword} />
       </form>
       <Results results={results} />
+      <Photos photos={photos} />
     </div>
   );
 }
