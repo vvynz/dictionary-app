@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Photos(props) {
-  // console.log(props.photos);
   const photos = props.photos;
 
   if (photos) {

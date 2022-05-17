@@ -3,7 +3,6 @@ import Definition from "./Definition";
 import Phonetic from "./Phonetic";
 
 export default function Results(props) {
-  console.log("PROPS =", props.results);
   const data = props.results;
 
   if (data) {

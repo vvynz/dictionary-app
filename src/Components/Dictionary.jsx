@@ -14,7 +14,7 @@ export default function Dictionary() {
 
   // 
   const handlePexelsRes = (res) => {
-    console.log("PEXELS DATA", res.data.photos);
+    // console.log("PEXELS DATA", res.data.photos);
     setPhotos(res.data.photos);
   }
 
@@ -28,6 +28,7 @@ export default function Dictionary() {
       .then(handleResponse)
       // if word doesn't exist, displays error message
       .catch((err) => console.log(err.response.data.message));
+
 
     // api call for Pexels
     let pexelsApiKey = "563492ad6f91700001000001c1aaf75420014625859b93064f2f6531";
