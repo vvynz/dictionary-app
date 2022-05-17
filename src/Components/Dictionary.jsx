@@ -31,7 +31,7 @@ export default function Dictionary() {
 
     // api call for Pexels
     let pexelsApiKey = "563492ad6f91700001000001c1aaf75420014625859b93064f2f6531";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
 
     // make the api call with the authorization headers
