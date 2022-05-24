@@ -4,6 +4,8 @@ import Results from "./Results";
 import Photos from "./Photos";
 
 import FormControl from "@mui/material/FormControl";
+import Paper from "@mui/material/Paper";
+import InputBase from "@mui/material/InputBase";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from '@mui/icons-material/Search';
@@ -52,12 +54,15 @@ export default function Dictionary() {
 
   return (
     <div>
-      <FormControl sx={{ display: 'flex', flexDirection: 'row' }}>
-        <TextField sx={{ width: '93%' }} label="Search for a word" color="secondary" autoFocus={true} onChange={handleKeyword} />
-        <IconButton sx={{ width: '7%' }} color="secondary" size="large" onClick={search}>
+      {/* <FormControl sx={{ display: 'flex', flexDirection: 'row' }}> */}
+      <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%' }} elevation={3}>
+        {/* <TextField sx={{ width: '93%' }} label="Search for a word" color="secondary" autoFocus={true} onChange={handleKeyword} /> */}
+        <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Look up a word..." onChange={handleKeyword} />
+        <IconButton color="secondary" size="large" onClick={search}>
           <SearchIcon fontSize="inherit" />
         </IconButton>
-      </FormControl>
+        {/* </FormControl> */}
+      </Paper>
       <Results results={results} />
       <Photos photos={photos} />
     </div>
