@@ -3,6 +3,14 @@ import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
 
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import TextField from "@mui/material/TextField";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from '@mui/icons-material/Search';
+
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState(null);
@@ -47,9 +55,14 @@ export default function Dictionary() {
 
   return (
     <div>
-      <form className="text-center" onSubmit={search}>
-        <input type="search" autoFocus={true} onChange={handleKeyword} />
-      </form>
+      <FormControl sx={{ display: 'flex', flexDirection: 'row' }}>
+        {/* <InputLabel>Search for a word...</InputLabel> */}
+        <TextField sx={{ width: '93%' }} label="Search for a word" color="secondary" autoFocus={true} onChange={handleKeyword} />
+        {/* <Button variant="outlined" color="secondary" sx={{ width: '25%' }}>Search</Button> */}
+        <IconButton sx={{ width: '7%' }} color="secondary" size="large" onClick={search}>
+          <SearchIcon fontSize="inherit" />
+        </IconButton>
+      </FormControl>
       <Results results={results} />
       <Photos photos={photos} />
     </div>

@@ -17,7 +17,7 @@ function App() {
           <Dictionary />
         </main>
         <footer className="text-center">
-          <Typography variant="caption" display="block" mt={2}>Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>
+          <Typography variant="caption" display="block" mt={2} sx={{ fontWeight: 500 }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>
         </footer>
       </div>
     </div>
