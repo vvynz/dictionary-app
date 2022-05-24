@@ -2,7 +2,6 @@ import React from "react";
 import Synonyms from "./Synonyms";
 
 export default function Definition(props) {
-  // console.log("DEFINITION PROPS", props.definitions);
   const meaning = props.definitions;
   return (
     <div>
