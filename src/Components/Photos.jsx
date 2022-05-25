@@ -9,7 +9,7 @@ export default function Photos(props) {
 
   if (photos) {
     return (
-      <Box sx={{ width: '100%', height: 450, overflowY: 'scroll' }}>
+      <Box sx={{ width: '100%', height: 500, overflowY: 'scroll', m: '0.7rem' }}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {photos.map((photo, key) => {
             return (
@@ -18,7 +18,8 @@ export default function Photos(props) {
                   src={`${photo.src.small}?w=248&fit=crop&auto=format`}
                   srcSet={`${photo.src.small}?w=248&fit=crop&auto=format&dpr=2 2x`}
                   alt={photo.alt}
-                  loading="lazy" />
+                  loading="lazy"
+                />
               </ImageListItem>
             )
           })}

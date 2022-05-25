@@ -55,7 +55,7 @@ export default function Dictionary() {
   return (
     <div>
       {/* <FormControl sx={{ display: 'flex', flexDirection: 'row' }}> */}
-      <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%' }} elevation={3}>
+      <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%', mb: '0.7rem' }} elevation={3}>
         {/* <TextField sx={{ width: '93%' }} label="Search for a word" color="secondary" autoFocus={true} onChange={handleKeyword} /> */}
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Look up a word..." onChange={handleKeyword} />
         <IconButton color="secondary" size="large" onClick={search}>
