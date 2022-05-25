@@ -7,14 +7,11 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from '@mui/icons-material/Search';
-import { deepPurple } from "@mui/material/colors";
 
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
-
-  const color = deepPurple[200];
 
   const handleResponse = (res) => {
     setResults(res.data[0]);
@@ -57,7 +54,7 @@ export default function Dictionary() {
     <div>
       <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%', mb: '0.7rem' }} elevation={3}>
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Look up a word..." onChange={handleKeyword} />
-        <IconButton sx={{ color: 'deepPurple[400]' }} size="large" onClick={search}>
+        <IconButton sx={{ color: 'ppurple' }} size="large" onClick={search}>
           <SearchIcon fontSize="inherit" />
         </IconButton>
       </Paper>

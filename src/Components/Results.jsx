@@ -3,7 +3,6 @@ import Definition from "./Definition";
 import Phonetic from "./Phonetic";
 
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import Typhography from "@mui/material/Typography";
 
 export default function Results(props) {
