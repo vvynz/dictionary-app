@@ -9,7 +9,7 @@ export default function Photos(props) {
 
   if (photos) {
     return (
-      <Box sx={{ width: '100%', height: 500, overflowY: 'scroll', m: '0.7rem' }}>
+      <Box sx={{ width: '100%', height: 500, overflowY: 'scroll' }}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {photos.map((photo, key) => {
             return (

@@ -1,15 +1,17 @@
 import React from "react";
 
+import Typhography from "@mui/material/Typography";
+
 export default function Synonyms(props) {
   const synonyms = props.synonyms;
 
   if (synonyms.length > 0) {
     return (
       <div>
-        <strong>Synonyms:</strong>
+        <Typhography sx={{ fontWeight: 'bold', ml: '-12px' }}>Synonyms:</Typhography>
         {synonyms.map((syn, key) => {
           return (
-            <span key={key}>{syn}</span>
+            <Typhography key={key}>{syn}</Typhography>
           )
         })}
       </div>

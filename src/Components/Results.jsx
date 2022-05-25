@@ -2,33 +2,37 @@ import React from "react";
 import Definition from "./Definition";
 import Phonetic from "./Phonetic";
 
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typhography from "@mui/material/Typography";
+
 export default function Results(props) {
   const data = props.results;
 
   if (data) {
     return (
-      <div>
-        <h4>{data.word}</h4>
-        <span>
+      <Card sx={{ padding: '20px', mb: '20px', mt: '20px' }} elevation={3}>
+        <div>
+          <Typhography variant="h4" component="div" gutterBottom>{data.word}</Typhography>
           {data.phonetics
             .filter(phonetic => {
               return phonetic.audio;
             })
             .map((phonetic, key) => {
               return (
-                <div key={key}>
-                  <Phonetic phonetic={phonetic} />
-                </div>
+                // <div key={key}>
+                <Phonetic key={key} phonetic={phonetic} />
+                // </div>
               )
             })}
-        </span>
-        {data.meanings.map(function(definition, index) {
-          return (
-            <div key={index}>
-              <Definition definitions={definition} />
-            </div>);
-        })}
-      </div>
+          {data.meanings.map(function(definition, index) {
+            return (
+              <div key={index}>
+                <Definition definitions={definition} />
+              </div>);
+          })}
+        </div>
+      </Card>
     );
   } else {
     return null;
