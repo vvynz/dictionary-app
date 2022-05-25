@@ -5,12 +5,10 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
 export default function Photos(props) {
-  console.log(props.photos);
   const photos = props.photos;
 
   if (photos) {
     return (
-      // <div className="photos">
       <Box sx={{ width: '100%', height: 450, overflowY: 'scroll' }}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {photos.map((photo, key) => {
