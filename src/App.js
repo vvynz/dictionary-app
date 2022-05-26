@@ -1,4 +1,4 @@
-import './App.css';
+import './Styles/App.scss';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -14,29 +14,34 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const theme = createTheme({
+  const darkTheme = createTheme({
     palette: {
-      mode: darkMode ? "dark" : "light",
+      mode: 'dark',
+      background: {
+        default: '#121212',
+      },
     }
   });
 
+  const lightTheme = createTheme({});
+
   return (
-    <ThemeProvider theme={theme}>
-      <Paper sx={{ height: '100%', width: '100vw', bgcolor: 'background.default' }}>
-        {/* <div className="App"> */}
-        <div className="container">
-          <header className="text-center">
-            <Typography variant="h2" component="div" gutterBottom>Dictionary App</Typography>
-            <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} />
-          </header>
-          <main>
-            <Dictionary defaultKeyword="dusk" />
-          </main>
-          <footer className="text-center">
-            <Typography variant="caption" display="block" mt={2} sx={{ fontWeight: 500 }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>
-          </footer>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <Paper sx={{ height: '100%', width: '100vw' }}>
+        <div className="App">
+          <div className="container">
+            <header className="text-center">
+              <Typography variant="h2" component="div" gutterBottom>Dictionary App</Typography>
+              <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} />
+            </header>
+            <main>
+              <Dictionary defaultKeyword="dusk" />
+            </main>
+            <footer className="text-center">
+              <Typography variant="caption" display="block" mt={2} sx={{ fontWeight: 500 }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>
+            </footer>
+          </div>
         </div>
-        {/* </div> */}
       </Paper>
     </ThemeProvider >
   );
