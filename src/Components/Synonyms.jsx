@@ -7,14 +7,15 @@ export default function Synonyms(props) {
 
   if (synonyms.length > 0) {
     return (
-      <div>
-        <Typhography sx={{ fontWeight: 'bold', ml: '-12px' }}>Synonyms:</Typhography>
+      <ul className="synonyms">
+        <Typhography sx={{ fontWeight: 'bold' }}>Synonyms:</Typhography>
         {synonyms.map((syn, key) => {
           return (
-            <Typhography key={key}>{syn}</Typhography>
+            // <Typhography className="synonyms" key={key}>{syn}</Typhography>
+            <li key={key}>{syn}</li>
           )
         })}
-      </div>
+      </ul>
     );
   } else {
     return null;

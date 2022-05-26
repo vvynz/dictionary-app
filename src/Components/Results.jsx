@@ -12,7 +12,7 @@ export default function Results(props) {
     return (
       <Card sx={{ padding: '20px', mb: '20px', mt: '20px' }} elevation={3}>
         <div>
-          <Typhography variant="h4" component="div" gutterBottom>{data.word}</Typhography>
+          <Typhography variant="h3" component="div" gutterBottom>{data.word}</Typhography>
           {data.phonetics
             .filter(phonetic => {
               return phonetic.audio;
