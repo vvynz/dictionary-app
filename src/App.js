@@ -6,21 +6,34 @@ import '@fontsource/roboto/700.css';
 
 import Dictionary from "./Components/Dictionary";
 import Typography from "@mui/material/Typography";
+import Paper from "@mui/material/Paper";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function App() {
+
+  const theme = createTheme({
+    palette: {
+      mode: "dark",
+    }
+  });
+
   return (
-    <div className="App">
-      <div className="container">
-        <header className="text-center">
-          <Typography variant="h2" component="div" gutterBottom>Dictionary App</Typography></header>
-        <main>
-          <Dictionary />
-        </main>
-        <footer className="text-center">
-          <Typography variant="caption" display="block" mt={2} sx={{ fontWeight: 500 }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>
-        </footer>
-      </div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Paper sx={{ height: '100%', width: '100vw', bgcolor: 'background.default' }}>
+        {/* <div className="App"> */}
+        <div className="container">
+          <header className="text-center">
+            <Typography variant="h2" component="div" gutterBottom>Dictionary App</Typography></header>
+          <main>
+            <Dictionary />
+          </main>
+          <footer className="text-center">
+            <Typography variant="caption" display="block" mt={2} sx={{ fontWeight: 500 }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>
+          </footer>
+        </div>
+        {/* </div> */}
+      </Paper>
+    </ThemeProvider >
   );
 }
 
