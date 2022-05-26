@@ -23,10 +23,13 @@ export default function Dictionary(props) {
     setPhotos(res.data.photos);
   }
 
-  // on submit event, will make an axios call to the api
-  const search = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    search();
+  }
 
+  // will make an axios call to the dictionary & pexels api
+  const search = () => {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
 
     axios.get(apiUrl)
@@ -54,7 +57,7 @@ export default function Dictionary(props) {
     <div>
       <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%', mb: '0.7rem' }} elevation={3}>
         <InputBase sx={{ ml: 2, flex: 1 }} defaultValue={props.defaultKeyword} onChange={handleKeyword} />
-        <IconButton sx={{ color: 'ppurple' }} size="large" onClick={search}>
+        <IconButton sx={{ color: 'ppurple' }} size="large" onClick={handleSubmit}>
           <SearchIcon fontSize="inherit" />
         </IconButton>
       </Paper>
