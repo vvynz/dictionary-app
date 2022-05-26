@@ -20,7 +20,6 @@ export default function Dictionary(props) {
 
   // 
   const handlePexelsRes = (res) => {
-    // console.log("PEXELS DATA", res.data.photos);
     setPhotos(res.data.photos);
   }
 
