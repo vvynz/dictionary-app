@@ -16,7 +16,7 @@ function App() {
 
   const theme = createTheme({
     palette: {
-      mode: "dark",
+      mode: darkMode ? "dark" : "light",
     }
   });
 
@@ -26,7 +26,9 @@ function App() {
         {/* <div className="App"> */}
         <div className="container">
           <header className="text-center">
-            <Typography variant="h2" component="div" gutterBottom>Dictionary App</Typography></header>
+            <Typography variant="h2" component="div" gutterBottom>Dictionary App</Typography>
+            <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} />
+          </header>
           <main>
             <Dictionary />
           </main>
