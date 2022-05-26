@@ -30,7 +30,7 @@ function App() {
             <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} />
           </header>
           <main>
-            <Dictionary />
+            <Dictionary defaultKeyword="dusk" />
           </main>
           <footer className="text-center">
             <Typography variant="caption" display="block" mt={2} sx={{ fontWeight: 500 }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>

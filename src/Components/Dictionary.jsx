@@ -8,8 +8,8 @@ import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function Dictionary() {
-  const [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+  const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
 
@@ -53,7 +53,7 @@ export default function Dictionary() {
   return (
     <div>
       <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%', mb: '0.7rem' }} elevation={3}>
-        <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Look up a word..." onChange={handleKeyword} />
+        <InputBase sx={{ ml: 2, flex: 1 }} defaultValue={props.defaultKeyword} onChange={handleKeyword} />
         <IconButton sx={{ color: 'ppurple' }} size="large" onClick={search}>
           <SearchIcon fontSize="inherit" />
         </IconButton>
