@@ -61,11 +61,14 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div>
-        <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%', mb: '0.7rem' }} elevation={3}>
-          <InputBase sx={{ ml: 2, flex: 1 }} defaultValue={props.defaultKeyword} onChange={handleKeyword} />
-          <IconButton sx={{ color: 'ppurple' }} size="large" onClick={handleSubmit}>
-            <SearchIcon fontSize="inherit" />
-          </IconButton>
+        <Paper sx={{ p: '2px 4px', width: '100%' }} elevation={3}>
+          <section className="form">
+            <InputBase sx={{ ml: 2, flex: 1 }} defaultValue={props.defaultKeyword} onChange={handleKeyword} />
+            <IconButton size="large" onClick={handleSubmit}>
+              <SearchIcon fontSize="inherit" />
+            </IconButton>
+          </section>
+          <div className="hint">Suggestions: twilight, book, baguette, toast... </div>
         </Paper>
         <Results results={results} />
         <Photos photos={photos} />
