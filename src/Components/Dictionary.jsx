@@ -10,6 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
+  const [loaded, setLoaded] = useState(false);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
 
@@ -53,16 +54,26 @@ export default function Dictionary(props) {
     setKeyword(e.target.value);
   }
 
-  return (
-    <div>
-      <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%', mb: '0.7rem' }} elevation={3}>
-        <InputBase sx={{ ml: 2, flex: 1 }} defaultValue={props.defaultKeyword} onChange={handleKeyword} />
-        <IconButton sx={{ color: 'ppurple' }} size="large" onClick={handleSubmit}>
-          <SearchIcon fontSize="inherit" />
-        </IconButton>
-      </Paper>
-      <Results results={results} />
-      <Photos photos={photos} />
-    </div>
-  );
+  const load = () => {
+    setLoaded(true);
+    search();
+  }
+
+  if (loaded) {
+    return (
+      <div>
+        <Paper sx={{ p: '2px 4px', display: 'flex', width: '100%', mb: '0.7rem' }} elevation={3}>
+          <InputBase sx={{ ml: 2, flex: 1 }} defaultValue={props.defaultKeyword} onChange={handleKeyword} />
+          <IconButton sx={{ color: 'ppurple' }} size="large" onClick={handleSubmit}>
+            <SearchIcon fontSize="inherit" />
+          </IconButton>
+        </Paper>
+        <Results results={results} />
+        <Photos photos={photos} />
+      </div>
+    );
+  } else {
+    load();
+    return ("Loading...");
+  }
 }
