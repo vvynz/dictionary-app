@@ -10,8 +10,8 @@ export default function Results(props) {
 
   if (data) {
     return (
-      <Card sx={{ padding: '20px', mb: '20px', mt: '20px' }} elevation={3}>
-        <div>
+      <div>
+        <Card sx={{ padding: '20px', mb: '20px', mt: '20px' }} elevation={3}>
           <Typhography variant="h3" component="div" gutterBottom>{data.word}</Typhography>
           {data.phonetics
             .filter(phonetic => {
@@ -24,14 +24,17 @@ export default function Results(props) {
                 // </div>
               )
             })}
+        </Card>
+        <section>
           {data.meanings.map(function(definition, index) {
             return (
               <div key={index}>
                 <Definition definitions={definition} />
               </div>);
-          })}
-        </div>
-      </Card>
+          })
+          }
+        </section>
+      </div>
     );
   } else {
     return null;
