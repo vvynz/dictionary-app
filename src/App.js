@@ -4,12 +4,15 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+import React, { useState } from "react";
 import Dictionary from "./Components/Dictionary";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
+import Switch from "@mui/material/Switch";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
 
   const theme = createTheme({
     palette: {
