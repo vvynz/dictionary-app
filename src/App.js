@@ -9,6 +9,9 @@ import Dictionary from "./Components/Dictionary";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import Switch from "@mui/material/Switch";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function App() {
@@ -32,7 +35,15 @@ function App() {
           <div className="container">
             <header className="header">
               <div className="switch">
-                <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} />
+                {/* <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} /> */}
+
+                {darkMode ?
+                  <IconButton onClick={() => setDarkMode(!darkMode)}>
+                    <LightModeIcon color="warning" />
+                  </IconButton> :
+                  <IconButton onClick={() => setDarkMode(!darkMode)}>
+                    <DarkModeIcon color="warning" />
+                  </IconButton>}
               </div>
               <Typography className="title" variant="h2" component="div" sx={{ fontWeight: '400', mb: '15px', mt: '-25px' }}>dictionary</Typography>
             </header>
