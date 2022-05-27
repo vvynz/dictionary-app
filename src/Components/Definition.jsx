@@ -14,7 +14,7 @@ export default function Definition(props) {
         {meaning.definitions.map(function(definition, index) {
           return (
             <section key={index} className="definition">
-              <Typhography sx={{ fontSize: '1.15rem', fontWeight: '400', mb: '10px', ml: '12px' }}>{definition.definition}</Typhography>
+              <Typhography sx={{ fontSize: '1.15rem', fontWeight: '400', mb: '10px', ml: '12px' }}>{index + 1}. {definition.definition}</Typhography>
               {definition.example ?
                 <div>
                   <Typhography sx={{ fontSize: '1rem', fontStyle: 'italic', ml: '7px', mb: '20px' }}>"{definition.example}"</Typhography>
