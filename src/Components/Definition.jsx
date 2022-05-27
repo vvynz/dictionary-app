@@ -10,7 +10,7 @@ export default function Definition(props) {
   return (
     <Card sx={{ padding: '20px 10px 0', mb: '20px', mt: '20px' }} elevation={3}>
       <CardContent>
-        <Typhography sx={{ fontStyle: 'italic', mt: '-12px', mb: '7px', fontWeight: '700' }}>{meaning.partOfSpeech}</Typhography>
+        <Typhography sx={{ fontStyle: 'italic', mt: '-12px', mb: '7px', fontWeight: '700', color: 'secondary.light' }}>{meaning.partOfSpeech}</Typhography>
         {meaning.definitions.map(function(definition, index) {
           return (
             <section key={index} className="definition">

@@ -20,7 +20,7 @@ function App() {
     palette: {
       mode: 'dark',
       secondary: {
-        light: '#d1c4e9',
+        light: '#b39ddb',
         main: '#d1c4e9'
       },
       warning: {
@@ -32,7 +32,7 @@ function App() {
   const lightTheme = createTheme({
     palette: {
       secondary: {
-        light: '#d1c4e9',
+        light: '#b39ddb',
         main: '#212121'
       },
       warning: {

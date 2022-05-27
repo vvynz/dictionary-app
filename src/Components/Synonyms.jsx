@@ -8,7 +8,7 @@ export default function Synonyms(props) {
   if (synonyms.length > 0) {
     return (
       <ul className="synonyms">
-        <Typhography sx={{ fontWeight: 'bold' }}>Synonyms:</Typhography>
+        <Typhography sx={{ fontWeight: 'bold', color: 'secondary.light' }}>Synonyms:</Typhography>
         {synonyms.map((syn, key) => {
           return (
             <li key={key}>{syn}</li>

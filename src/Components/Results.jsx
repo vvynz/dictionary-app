@@ -14,7 +14,7 @@ export default function Results(props) {
         <Card sx={{ padding: '20px', mb: '20px', mt: '20px' }} elevation={3}>
           <div className="definition-header">
             <Typhography variant="h3" component="div" gutterBottom>{data.word}</Typhography>
-            <Typhography sx={{ mt: '24px', ml: '18px' }} variant="subtitle1">{data.phonetic}</Typhography>
+            <Typhography sx={{ mt: '24px', ml: '18px', color: 'secondary.light' }} variant="subtitle1">{data.phonetic}</Typhography>
           </div>
           {data.phonetics
             .filter(phonetic => {
