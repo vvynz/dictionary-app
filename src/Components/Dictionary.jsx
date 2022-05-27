@@ -68,7 +68,7 @@ export default function Dictionary(props) {
               <SearchIcon fontSize="inherit" />
             </IconButton>
           </section>
-          <div className="hint">Suggestions: twilight, book, baguette, toast... </div>
+          <div className="hint">Suggestions: twilight, pie, book, baguette, toast, autumn... </div>
         </Paper>
         <Results results={results} />
         <Photos photos={photos} />

@@ -12,7 +12,7 @@ import Switch from "@mui/material/Switch";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const darkTheme = createTheme({
     palette: {
@@ -27,18 +27,18 @@ function App() {
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Paper sx={{ height: '100%', width: '100vw' }}>
+      <Paper sx={{ height: '100%', width: '100%' }}>
         <div className="App">
           <div className="container">
             <header className="text-center">
-              <Typography variant="h2" component="div" gutterBottom>Dictionary App</Typography>
+              <Typography variant="h2" component="div" sx={{ fontWeight: '400', pt: '20px' }}>dictionary</Typography>
               <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} />
             </header>
             <main>
               <Dictionary defaultKeyword="dusk" />
             </main>
             <footer className="text-center">
-              <Typography variant="caption" display="block" mt={2} sx={{ fontWeight: 500 }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>
+              <Typography variant="caption" display="block" sx={{ fontWeight: 500, mt: '20px', pb: '10px' }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a>.</Typography>
             </footer>
           </div>
         </div>
