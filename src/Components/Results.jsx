@@ -19,9 +19,7 @@ export default function Results(props) {
             })
             .map((phonetic, key) => {
               return (
-                // <div key={key}>
                 <Phonetic key={key} phonetic={phonetic} />
-                // </div>
               )
             })}
         </Card>

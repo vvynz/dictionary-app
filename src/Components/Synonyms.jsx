@@ -11,7 +11,6 @@ export default function Synonyms(props) {
         <Typhography sx={{ fontWeight: 'bold' }}>Synonyms:</Typhography>
         {synonyms.map((syn, key) => {
           return (
-            // <Typhography className="synonyms" key={key}>{syn}</Typhography>
             <li key={key}>{syn}</li>
           )
         })}
