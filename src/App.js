@@ -20,13 +20,27 @@ function App() {
   const darkTheme = createTheme({
     palette: {
       mode: 'dark',
-      background: {
-        default: '#121212',
+      secondary: {
+        light: '#d1c4e9',
+        main: '#d1c4e9'
       },
+      warning: {
+        main: '#ffd740'
+      }
     }
   });
 
-  const lightTheme = createTheme({});
+  const lightTheme = createTheme({
+    palette: {
+      secondary: {
+        light: '#d1c4e9',
+        main: '#212121'
+      },
+      warning: {
+        main: '#ffd740'
+      },
+    }
+  });
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
