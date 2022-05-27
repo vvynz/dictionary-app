@@ -8,7 +8,6 @@ import React, { useState } from "react";
 import Dictionary from "./Components/Dictionary";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
-import Switch from "@mui/material/Switch";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import IconButton from "@mui/material/IconButton";
@@ -49,8 +48,6 @@ function App() {
           <div className="container">
             <header className="header">
               <div className="switch">
-                {/* <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} /> */}
-
                 {darkMode ?
                   <IconButton onClick={() => setDarkMode(!darkMode)}>
                     <LightModeIcon color="warning" />
