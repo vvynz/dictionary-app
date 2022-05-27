@@ -30,9 +30,11 @@ function App() {
       <Paper sx={{ height: '100%', width: '100%' }}>
         <div className="App">
           <div className="container">
-            <header className="text-center">
-              <Typography variant="h2" component="div" sx={{ fontWeight: '400', pt: '20px' }}>dictionary</Typography>
-              <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} />
+            <header className="header">
+              <div className="switch">
+                <Switch checked={darkMode} color="secondary" onChange={() => setDarkMode(!darkMode)} />
+              </div>
+              <Typography className="title" variant="h2" component="div" sx={{ fontWeight: '400', mb: '15px', mt: '-25px' }}>dictionary</Typography>
             </header>
             <main>
               <Dictionary defaultKeyword="dusk" />

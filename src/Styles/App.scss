@@ -1,3 +1,14 @@
+.title {
+  text-align: center;
+}
+
+.switch {
+  // border: 1px solid whitesmoke;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 10px;
+}
+
 .hint {
   margin: 0 10px 10px;
   font-size: 0.85rem;
