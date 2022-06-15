@@ -13,6 +13,7 @@ export default function Dictionary(props) {
   const [loaded, setLoaded] = useState(false);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
+  const [error, setError] = useState("");
 
   const handleResponse = (res) => {
     setResults(res.data[0]);
@@ -35,7 +36,7 @@ export default function Dictionary(props) {
     axios.get(apiUrl)
       .then(handleResponse)
       // if word doesn't exist, displays error message
-      .catch((err) => console.log(err.response.data.message));
+      .catch((err) => setError(err.response.data.message));
 
 
     // api call for Pexels
@@ -68,7 +69,8 @@ export default function Dictionary(props) {
               <SearchIcon sx={{ color: 'secondary.light' }} fontSize="inherit" />
             </IconButton>
           </section>
-          <div className="hint">Suggestions: twilight, pie, book, baguette, toast, autumn... </div>
+          <section className="err-msg">{error}</section>
+          <section className="hint">Suggestions: twilight, pie, book, baguette, toast, autumn... </section>
         </Paper>
         <Results results={results} />
         <Photos photos={photos} />
