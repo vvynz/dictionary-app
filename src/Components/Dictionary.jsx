@@ -26,6 +26,9 @@ export default function Dictionary(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // clears the error message
+    setError("");
     search();
   }
 
@@ -35,6 +38,7 @@ export default function Dictionary(props) {
 
     axios.get(apiUrl)
       .then(handleResponse)
+
       // if word doesn't exist, displays error message
       .catch((err) => setError(err.response.data.message));
 
