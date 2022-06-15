@@ -1,6 +1,6 @@
 # React Dictionary App
 
-A single page dictionary application that was built using React, the Free Dictionary API, the Pexels API and Material UI.
+A single page dictionary application that was built using React, the Free Dictionary API, the Pexels API and Material UI. Check out the [live demo](https://aesthetic-froyo.netlify.app/) hosted on Netlify!
 
 ## Previews
 
