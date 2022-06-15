@@ -10,7 +10,7 @@ export default function Photos(props) {
   if (photos) {
     return (
       <Box sx={{ width: '100%', height: 500, overflowY: 'scroll' }}>
-        <ImageList cols={3} gap={12}>
+        <ImageList cols={3} gap={10}>
           {photos.map((photo, key) => {
             return (
               <ImageListItem key={key}>
