@@ -62,7 +62,7 @@ function App() {
               <Dictionary defaultKeyword="dusk" />
             </main>
             <footer className="text-center">
-              <Typography variant="caption" display="block" sx={{ fontWeight: 500, mt: '20px', pb: '15px' }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a> and is hosted on <a href="https://aesthetic-froyo.netlify.app/" target="_blank" rel="noreferrer">Netlify</a>.</Typography>
+              <Typography variant="caption" display="block" sx={{ fontWeight: 500, mt: '20px', pb: '15px' }} >Coded by Vivian Zhang and is open sourced on <a href="https://github.com/vvynz/dictionary-app" target="_blank" rel="noreferrer">Github</a> and is hosted on <a href="https://dictionaryy.netlify.app" target="_blank" rel="noreferrer">Netlify</a>.</Typography>
             </footer>
           </div>
         </div>
