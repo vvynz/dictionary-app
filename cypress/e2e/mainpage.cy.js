@@ -16,4 +16,14 @@ describe('main page', () => {
       cy.get(".react-audio-player").should("exist")
     })
   })
+
+  context("definitions section", () => {
+    it("should display the definition(s) of the word", () => {
+      cy.get(".definition").should("exist")
+    })
+    // it("should display the synonyms of the word", () => {
+    //   // not every word will have synonyms so probabyl not a good thing to test for..
+    //   cy.get(".synonyms").contains("evenfall, nightfall, smokefall, vespers")
+    // })
+  })
 })
