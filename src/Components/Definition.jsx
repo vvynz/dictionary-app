@@ -13,7 +13,7 @@ export default function Definition(props) {
         <Typhography sx={{ fontStyle: 'italic', mt: '-12px', mb: '7px', fontWeight: '700', color: 'secondary.light' }}>{meaning.partOfSpeech}</Typhography>
         {meaning.definitions.map(function(definition, index) {
           return (
-            <section key={index} className="definition">
+            <section key={index} className="definition" data-test="definition">
               <Typhography sx={{ fontSize: '1.15rem', fontWeight: '400', mb: '10px', ml: '12px' }}>{index + 1}. {definition.definition}</Typhography>
               {definition.example ?
                 <div>
