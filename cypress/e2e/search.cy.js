@@ -15,6 +15,8 @@ describe('search form', () => {
   it.only("displays an error if a word cannot be found", () => {
     cy.get(".MuiInputBase-input").clear().type("pari")
     cy.get(".MuiButtonBase-root").eq(1).click()
-    cy.get(".err-msg").should("exist").contains("Sorry pal, we couldn't find definitions for the word you were looking for.")
+    cy.getByData("err-msg").should("exist").contains("Sorry pal, we couldn't find definitions for the word you were looking for.")
   })
+
+
 })

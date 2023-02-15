@@ -73,7 +73,7 @@ export default function Dictionary(props) {
               <SearchIcon sx={{ color: 'secondary.light' }} fontSize="inherit" />
             </IconButton>
           </section>
-          <section className="err-msg">{error}</section>
+          <section className="err-msg" data-test="err-msg">{error}</section>
           <section className="hint">Suggestions: twilight, pie, book, baguette, toast, autumn... </section>
         </Paper>
         <Results results={results} />
