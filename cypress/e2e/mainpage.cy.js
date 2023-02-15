@@ -4,7 +4,7 @@ describe('main page', () => {
   })
 
   it("has a header with the correct text", () => {
-    cy.get(".header").contains("dictionary")
+    cy.getByData("header").contains("dictionary")
   })
 
   context("definition header", () => {

@@ -46,7 +46,7 @@ function App() {
       <Paper sx={{ height: '100%', width: '100%' }}>
         <div className="App">
           <div className="container">
-            <header className="header">
+            <header data-test="header" className="header">
               <div className="switch">
                 {darkMode ?
                   <IconButton onClick={() => setDarkMode(!darkMode)}>
