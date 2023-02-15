@@ -67,8 +67,8 @@ export default function Dictionary(props) {
     return (
       <div>
         <Paper sx={{ p: '2px 4px', width: '100%' }} elevation={3}>
-          <section className="form">
-            <InputBase sx={{ ml: 2, flex: 1 }} defaultValue={props.defaultKeyword} onChange={handleKeyword} />
+          <section className="form" data-test="search-form">
+            <InputBase sx={{ ml: 2, flex: 1 }} defaultValue={props.defaultKeyword} onChange={handleKeyword} data-test="searchInput" />
             <IconButton size="large" onClick={handleSubmit}>
               <SearchIcon sx={{ color: 'secondary.light' }} fontSize="inherit" />
             </IconButton>
