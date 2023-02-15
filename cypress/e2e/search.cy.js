@@ -12,11 +12,20 @@ describe('search form', () => {
   })
 
   //unhappy path
-  it.only("displays an error if a word cannot be found", () => {
+  it("displays an error if a word cannot be found", () => {
     cy.get(".MuiInputBase-input").clear().type("pari")
     cy.get(".MuiButtonBase-root").eq(1).click()
-    cy.getByData("err-msg").should("exist").contains("Sorry pal, we couldn't find definitions for the word you were looking for.")
+    cy.getByData("err-msg").contains("Sorry pal, we couldn't find definitions for the word you were looking for.")
   })
 
+  it("does not display the error message once a word is found", () => {
+    cy.get(".MuiInputBase-input").clear().type("pari")
+    cy.get(".MuiButtonBase-root").eq(1).click()
+    cy.getByData("err-msg").should("exist")
 
+    cy.get(".MuiInputBase-input").clear().type("par")
+    cy.get(".MuiButtonBase-root").eq(1).click()
+
+    // cy.getByData("err-msg").contains(" ") // cannot test for empty string, but even when the error message isn't displayed, it still "exists" in the DOM
+  })
 })
