@@ -5,5 +5,7 @@ describe('search form', () => {
 
   it("allows users to look up a word", () => {
     cy.get(".MuiInputBase-input").clear().type("book")
+    cy.get(".MuiButtonBase-root").eq(1).click()
+    cy.get(".definition-header").contains("book")
   })
 })
